@@ -8,5 +8,13 @@ def sentence_maker(phrase):
     #this will capitalize the first letter and also add a ? at the end on the string
   else:
     return "{}.".format(capitalized)
-    
-print(sentence_maker("yes please"))
+
+results = []
+while True:
+  user_input = input("Say something: ")
+  if user_input == "\end":
+    break
+  else:
+    results.append(sentence_maker(user_input))
+  
+print(" ".join(results))
